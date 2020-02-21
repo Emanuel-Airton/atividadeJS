@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            
+           //A)
+            const numeros = [1,2,3,4,5];
+            numeroMult = numeros.map(item => item + 10);
+            console.log(numeroMult)
+            numeroMult
+
+
+            //B)
+            const usuario = {nome: 'ana', idade: 18};
+            mostraIdade = ()=> usuario.nome
+            console.log(mostraIdade(usuario))
+
+
+            //C)
+            const nome = 'Bia';
+            const idade = 20;
+
+            mostraUsuario = (nome='Ana', idade=18)=>({nome, idade});
+            console.log(mostraUsuario(nome, idade));
+            console.log(mostraUsuario(nome));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <script>
+            
+            const usuarios = [
+                {nome: 'pedro', idade: 18, escola: 'ifpi'},
+                {nome: 'ana', idade: 22, escola: 'ifpi'},
+                {nome: 'lia', idade: 15, escola: 'ibc'},
+             ]
+
+
+            //A) Utilizando o map crie uma variável que contenha todas as idades dos usuários
+            const idades = usuarios.map(function(usu){
+                return usu.idade;
+            })
+            console.log(idades);
+
+
+            //B) Utilizando o filter crie uma variável que contenha apenas os alunos que estudam no ifpi
+            const alunosIFPI = usuarios.filter(function(usu){
+                    if (usu.escola == 'ifpi'){
+                        console.log('estudante do IFPI:', usu.nome)
+                    }
+               
+            })
+            alunosIFPI; 
+
+
+            // C) Utilizando o find crie uma variável que procure por aluno do ibc.
+            const buscar = usuarios.find(function(usu){
+                if(usu.escola == 'ibc'){
+                    return usu;
+                }
+            })
+            console.log(buscar);
+
+
+            //D) Multiplique a idade de todos os alunos por 2 e depois realize um filtro nos alunos que possuem no máximo 40 anos
+            const multiplique = usuarios.filter(function(usu){
+                const vezesidade = usu.idade * 2;
+                if(vezesidade<40){
+                    console.log('menos de 40 anos: ',usu.nome);    
+                }
+                
+            })
+            multiplique;
+        </script>
+    </body>
+</html>
